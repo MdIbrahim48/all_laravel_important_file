@@ -1,0 +1,28 @@
+  <div class="mr-2 s_qtty_area d-flex">
+                                        <div onclick="decrement()" class="btn border_redious0"><i class="fa fa-minus font-size-15"></i></div>
+                                        <div id="output-area" desabled class="btn border_redious0 btn-desabled font-size-15"></div>
+                                        <input type="hidden" name="qtty" value="1" id="input-qtty">
+                                        <div class="btn border_redious0" onclick="increment()"><i class="fa fa-plus font-size-15"></i></div>
+                                    </div>
+
+<script>
+    var x = 1;
+    document.getElementById('output-area').innerHTML = x;
+
+    function increment() {
+        var a = ++x;
+        document.getElementById('output-area').innerHTML = a;
+        document.getElementById('input-qtty').value = a;
+        document.getElementById('input-buynowqtty').value = a;
+
+    }
+
+    function decrement() {
+        if (x > 1) {
+            var a = --x;
+            document.getElementById('output-area').innerHTML = a;
+            document.getElementById('input-qtty').value = a;
+            document.getElementById('input-buynowqtty').value = a;
+        }
+    }
+</script>
