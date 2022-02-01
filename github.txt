@@ -1,0 +1,23 @@
+1.clone: git clone https://github.com/biritxyz/gittest.git(CLONE A PROJECT)
+
+2.branch: git branch kajal(CREATE A BRANCH)
+		git branch(CHECK ALL BRANCH NAME)
+		git checkout kajal(GO TO THIS BRANCH)
+
+3. 	git add *
+	git commit -m "first commit"
+	git push -u origin kajal(push a commit(CODE))
+	
+4.create a pull request(MANUALLY FROM WEBSITE)
+
+5.git remote add upstream https://github.com/NEONScience/DI-NEON-participants.git(update from main branch for first time)
+
+6.git pull upstream main(PULL ALL FILE FROM MAIN BRANCH BEFORE START WORK)
+
+
+ $this->app->bind('path.public', function(){
+           return realpath(base_path().'/../pos.birit.tech'); 
+        });
+
+
+$total_invoice = Pos::whereDate('created_at',">=",request()->get('from'))->where('created_at',"<=",request()->get('to'))->count();

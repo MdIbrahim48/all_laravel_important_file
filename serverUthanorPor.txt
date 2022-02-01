@@ -1,0 +1,5 @@
+ 
+appserviceProvider e dite hobe
+$this->app->bind('path.public', function(){
+           return realpath(base_path().'/../pos.birit.tech'); 
+        });
